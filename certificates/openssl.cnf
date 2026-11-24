@@ -1,0 +1,22 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+x509_extensions = v3_req
+
+[dn]
+C = IN
+ST = Uttarakhand
+L = Dehradun
+O = Project 16
+OU = HTTPS Lab
+CN = project-16-alb-1963248807.us-east-2.elb.amazonaws.com
+
+[v3_req]
+subjectAltName = @alt_names
+keyUsage = critical, digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth
+
+[alt_names]
+DNS.1 = project-16-alb-1963248807.us-east-2.elb.amazonaws.com
